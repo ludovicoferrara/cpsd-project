@@ -1,82 +1,98 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
     "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
-<entity name="projectmodel" class="ptolemy.actor.TypedCompositeActor">
+<entity name="projectmodel_local" class="ptolemy.actor.TypedCompositeActor">
     <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="11.0.1">
     </property>
-    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={978, 398, 928, 617}, maximized=false}">
-    </property>
-    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 500]">
-    </property>
-    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
-    </property>
-    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{340.0, 240.0}">
-    </property>
     <property name="WirelessDirector" class="ptolemy.domains.wireless.kernel.WirelessDirector">
-        <property name="stopTime" class="ptolemy.data.expr.Parameter" value="100">
+        <property name="stopTime" class="ptolemy.data.expr.Parameter" value="20.0">
         </property>
-        <property name="stopWhenQueueIsEmpty" class="ptolemy.data.expr.Parameter" value="false">
+        <property name="synchronizeToRealTime" class="ptolemy.data.expr.Parameter" value="true">
         </property>
-        <property name="synchronizeToRealTime" class="ptolemy.data.expr.Parameter" value="false">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-65.0, 90.0]">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[110.0, 120.0]">
-        </property>
+    </property>
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={5, 207, 994, 632}, maximized=false}">
+    </property>
+    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[764, 502]">
+    </property>
+    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0000000000000104">
+    </property>
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{179.40554334170855, 183.91386620603015}">
     </property>
     <entity name="GlobalEnvironment" class="ptolemy.domains.wireless.kernel.WirelessComposite">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[140.0, 345.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{5.0, 265.0}">
         </property>
-        <property name="SDF Director" class="ptolemy.domains.sdf.kernel.SDFDirector">
-            <property name="iterations" class="ptolemy.data.expr.Parameter" value="0">
-            </property>
-            <property name="allowDisconnectedGraphs" class="ptolemy.data.expr.Parameter" value="true">
-            </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[95.0, 60.0]">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={26, 256, 930, 632}, maximized=false}">
+        </property>
+        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 502]">
+        </property>
+        <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.250000000000005">
+        </property>
+        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{210.80584295071554, 203.1146914994898}">
+        </property>
+        <property name="DE Director" class="ptolemy.domains.de.kernel.DEDirector">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[25.0, 125.0]">
             </property>
         </property>
-        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={840, 137, 928, 617}, maximized=false}">
-        </property>
-        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 500]">
-        </property>
-        <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
-        </property>
-        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{357.0, 247.265625}">
-        </property>
-        <port name="humOut" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
-            <property name="output"/>
-            <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="EnvironmentChannel_Hum">
-            </property>
-            <property name="insideChannel" class="ptolemy.data.expr.StringParameter" value="">
-            </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[490.0, 245.0]">
-            </property>
-        </port>
         <port name="trigger" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
             <property name="input"/>
             <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="">
             </property>
             <property name="insideChannel" class="ptolemy.data.expr.StringParameter" value="">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="{20.0, 200.0}">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[-50.0, 260.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
             </property>
         </port>
-        <port name="tempOut" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
+        <port name="package_out" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
             <property name="output"/>
-            <property name="defaultValue" class="ptolemy.data.expr.Parameter">
-            </property>
-            <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="EnvironmentChannel_Temp">
-            </property>
-            <property name="outsideTransmitProperties" class="ptolemy.data.expr.Parameter">
+            <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="C_Ext_Data">
             </property>
             <property name="insideChannel" class="ptolemy.data.expr.StringParameter" value="">
             </property>
-            <property name="insideTransmitProperties" class="ptolemy.data.expr.Parameter">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[450.0, 245.0]">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[490.0, 325.0]">
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_type" class="ptolemy.actor.TypeAttribute" value="{humid=double, temp=double}">
             </property>
         </port>
+        <entity name="Const2" class="ptolemy.actor.lib.Const">
+            <property name="value" class="ptolemy.data.expr.Parameter" value="20">
+            </property>
+            <doc>Create a constant sequence.</doc>
+            <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+                <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+                </property>
+                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
+                </property>
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[75.0, 290.0]">
+            </property>
+        </entity>
+        <entity name="RecordAssembler" class="ptolemy.actor.lib.RecordAssembler">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[310.0, 225.0]">
+            </property>
+            <port name="temp" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="double">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="humid" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="double">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
         <entity name="Ramp" class="ptolemy.actor.lib.Ramp">
             <doc>Create a sequence of tokens with increasing value</doc>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[125.0, 245.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[70.0, 230.0]">
             </property>
         </entity>
         <entity name="Expression" class="ptolemy.actor.lib.Expression">
@@ -90,23 +106,348 @@
                 <property name="displayHeight" class="ptolemy.data.expr.Parameter" value="10">
                 </property>
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[315.0, 245.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[195.0, 230.0]">
             </property>
             <port name="input" class="ptolemy.actor.TypedIOPort">
                 <property name="input"/>
             </port>
         </entity>
-        <entity name="Const" class="ptolemy.actor.lib.Const">
-            <property name="value" class="ptolemy.data.expr.Parameter" value="20">
+        <relation name="relation2" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation3" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation4" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation6" class="ptolemy.actor.TypedIORelation">
+            <vertex name="vertex1" value="[-5.0, 260.0]">
+            </vertex>
+        </relation>
+        <relation name="relation" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <link port="trigger" relation="relation6"/>
+        <link port="package_out" relation="relation"/>
+        <link port="Const2.output" relation="relation2"/>
+        <link port="Const2.trigger" relation="relation6"/>
+        <link port="RecordAssembler.output" relation="relation"/>
+        <link port="RecordAssembler.temp" relation="relation4"/>
+        <link port="RecordAssembler.humid" relation="relation2"/>
+        <link port="Ramp.output" relation="relation3"/>
+        <link port="Ramp.trigger" relation="relation6"/>
+        <link port="Expression.output" relation="relation4"/>
+        <link port="Expression.input" relation="relation3"/>
+    </entity>
+    <entity name="SensorHumidity" class="ptolemy.domains.wireless.kernel.WirelessComposite">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[140.0, 210.0]">
+        </property>
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={41, 68, 930, 632}, maximized=false}">
+        </property>
+        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 502]">
+        </property>
+        <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
+        </property>
+        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{412.91017587939706, 294.5904522613066}">
+        </property>
+        <property name="DE Director" class="ptolemy.domains.de.kernel.DEDirector">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[150.0, 220.0]">
             </property>
-            <doc>Create a constant sequence.</doc>
+        </property>
+        <port name="ext_package_in" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
+            <property name="input"/>
+            <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="C_Ext_Data">
+            </property>
+            <property name="insideChannel" class="ptolemy.data.expr.StringParameter" value="">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[80.0, 335.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_type" class="ptolemy.actor.TypeAttribute" value="{humid=double, temp=double}">
+            </property>
+        </port>
+        <port name="package_out" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
+            <property name="output"/>
+            <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="C_Int_Data">
+            </property>
+            <property name="insideChannel" class="ptolemy.data.expr.StringParameter" value="">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[675.0, 345.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_type" class="ptolemy.actor.TypeAttribute" value="{id=string, value=double}">
+            </property>
+        </port>
+        <port name="int_package_in" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
+            <property name="input"/>
+            <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="C_Int_Data">
+            </property>
+            <property name="insideChannel" class="ptolemy.data.expr.StringParameter" value="">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[80.0, 460.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_type" class="ptolemy.actor.TypeAttribute" value="{id=string, value=double}">
+            </property>
+        </port>
+        <entity name="Gaussian" class="ptolemy.actor.lib.Gaussian">
+            <doc>Create a sequence of gaussian random variables</doc>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[300.0, 200.0]">
+            </property>
+        </entity>
+        <entity name="StringConst" class="ptolemy.actor.lib.StringConst">
+            <property name="value" class="ptolemy.data.expr.Parameter" value="HumiditySensor">
+            </property>
+            <doc>Create a constant sequence with a string value.</doc>
             <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
                 <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
                 </property>
-                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
+                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="80">
+                </property>
+                <property name="displayHeight" class="ptolemy.data.expr.Parameter" value="10">
                 </property>
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[125.0, 325.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[470.0, 265.0]">
+            </property>
+        </entity>
+        <entity name="AddSubtract" class="ptolemy.actor.lib.AddSubtract">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[420.0, 355.0]">
+            </property>
+        </entity>
+        <entity name="RecordAssembler" class="ptolemy.actor.lib.RecordAssembler">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[555.0, 325.0]">
+            </property>
+            <port name="id" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="string">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="value" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="double">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+        <entity name="Display" class="ptolemy.actor.lib.gui.Display">
+            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={777, 410, 365, 259}, maximized=false}">
+            </property>
+            <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute" value="[347, 186]">
+            </property>
+            <property name="suppressBlankLines" class="ptolemy.data.expr.Parameter" value="false">
+            </property>
+            <property name="title" class="ptolemy.data.expr.StringParameter" value="humidity loop">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[550.0, 450.0]">
+            </property>
+        </entity>
+        <entity name="RecordDisassembler2" class="ptolemy.actor.lib.RecordDisassembler">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[290.0, 440.0]">
+            </property>
+            <port name="id" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="string">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="value" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="double">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+        <entity name="RecordDisassembler" class="ptolemy.actor.lib.RecordDisassembler">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[205.0, 315.0]">
+            </property>
+            <port name="humid" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="double">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="temp" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="double">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+        <entity name="InternalHumidity" class="ptolemy.domains.sdf.lib.SampleDelay">
+            <property name="initialOutputs" class="ptolemy.data.expr.Parameter" value="{{id = &quot;init&quot;, value = 30.0}}">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="20">
+            </property>
+            <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+                <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="initialOutputs">
+                </property>
+                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+                </property>
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[180.0, 460.0]">
+            </property>
+        </entity>
+        <relation name="relation2" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation6" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation7" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation11" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation9" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation3" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation8" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation10" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation4" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <link port="ext_package_in" relation="relation4"/>
+        <link port="package_out" relation="relation11"/>
+        <link port="int_package_in" relation="relation8"/>
+        <link port="Gaussian.output" relation="relation2"/>
+        <link port="StringConst.output" relation="relation6"/>
+        <link port="AddSubtract.plus" relation="relation2"/>
+        <link port="AddSubtract.plus" relation="relation"/>
+        <link port="AddSubtract.plus" relation="relation3"/>
+        <link port="AddSubtract.output" relation="relation7"/>
+        <link port="RecordAssembler.output" relation="relation11"/>
+        <link port="RecordAssembler.id" relation="relation6"/>
+        <link port="RecordAssembler.value" relation="relation7"/>
+        <link port="Display.input" relation="relation9"/>
+        <link port="RecordDisassembler2.input" relation="relation10"/>
+        <link port="RecordDisassembler2.id" relation="relation9"/>
+        <link port="RecordDisassembler2.value" relation="relation3"/>
+        <link port="RecordDisassembler.input" relation="relation4"/>
+        <link port="RecordDisassembler.temp" relation="relation"/>
+        <link port="InternalHumidity.input" relation="relation8"/>
+        <link port="InternalHumidity.output" relation="relation10"/>
+    </entity>
+    <entity name="Controller" class="ptolemy.domains.wireless.kernel.WirelessComposite">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{250.0, 260.0}">
+        </property>
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={39, 240, 930, 632}, maximized=false}">
+        </property>
+        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 502]">
+        </property>
+        <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
+        </property>
+        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{357.0, 248.265625}">
+        </property>
+        <property name="DE Director" class="ptolemy.domains.de.kernel.DEDirector">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{175.0, 159.53125}">
+            </property>
+        </property>
+        <port name="package_in" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
+            <property name="input"/>
+            <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="C_Int_Data">
+            </property>
+            <property name="insideChannel" class="ptolemy.data.expr.StringParameter" value="">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{25.0, 250.0}">
+            </property>
+            <property name="_type" class="ptolemy.actor.TypeAttribute" value="{id=string, value=double}">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <port name="package_out" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
+            <property name="output"/>
+            <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="C_Controller">
+            </property>
+            <property name="insideChannel" class="ptolemy.data.expr.StringParameter" value="">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[620.0, 260.0]">
+            </property>
+            <property name="_type" class="ptolemy.actor.TypeAttribute" value="{id=string, value=boolean}">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+        </port>
+        <entity name="RecordDisassembler" class="ptolemy.actor.lib.RecordDisassembler">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[145.0, 230.0]">
+            </property>
+            <port name="id" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="string">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+        <entity name="StringCompare" class="ptolemy.actor.lib.string.StringCompare">
+            <property name="firstString" class="ptolemy.actor.parameters.PortParameter" value="">
+            </property>
+            <property name="secondString" class="ptolemy.actor.parameters.PortParameter" value="">
+            </property>
+            <doc>Output a comparison function of two strings</doc>
+            <property name="_icon" class="ptolemy.vergil.icon.AttributeValueIcon">
+                <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="function">
+                </property>
+                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="10">
+                </property>
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[290.0, 270.0]">
+            </property>
+        </entity>
+        <entity name="StringConst" class="ptolemy.actor.lib.StringConst">
+            <property name="value" class="ptolemy.data.expr.Parameter" value="HumiditySensor">
+            </property>
+            <doc>Create a constant sequence with a string value.</doc>
+            <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+                <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+                </property>
+                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="80">
+                </property>
+                <property name="displayHeight" class="ptolemy.data.expr.Parameter" value="10">
+                </property>
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[170.0, 315.0]">
+            </property>
+        </entity>
+        <entity name="RecordAssembler" class="ptolemy.actor.lib.RecordAssembler">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[520.0, 240.0]">
+            </property>
+            <port name="id" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="string">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="value" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="boolean">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+        <entity name="StringConst2" class="ptolemy.actor.lib.StringConst">
+            <property name="value" class="ptolemy.data.expr.Parameter" value="Sprinkler">
+            </property>
+            <doc>Create a constant sequence with a string value.</doc>
+            <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+                <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+                </property>
+                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="80">
+                </property>
+                <property name="displayHeight" class="ptolemy.data.expr.Parameter" value="10">
+                </property>
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[435.0, 200.0]">
             </property>
         </entity>
         <relation name="relation" class="ptolemy.actor.TypedIORelation">
@@ -115,146 +456,337 @@
         </relation>
         <relation name="relation3" class="ptolemy.actor.TypedIORelation">
         </relation>
-        <link port="humOut" relation="relation2"/>
-        <link port="tempOut" relation="relation3"/>
-        <link port="Ramp.output" relation="relation"/>
-        <link port="Expression.output" relation="relation2"/>
-        <link port="Expression.input" relation="relation"/>
-        <link port="Const.output" relation="relation3"/>
+        <relation name="relation4" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation5" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation6" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <link port="package_in" relation="relation"/>
+        <link port="package_out" relation="relation4"/>
+        <link port="RecordDisassembler.input" relation="relation"/>
+        <link port="RecordDisassembler.id" relation="relation3"/>
+        <link port="StringCompare.firstString" relation="relation3"/>
+        <link port="StringCompare.secondString" relation="relation2"/>
+        <link port="StringCompare.output" relation="relation5"/>
+        <link port="StringConst.output" relation="relation2"/>
+        <link port="RecordAssembler.output" relation="relation4"/>
+        <link port="RecordAssembler.id" relation="relation6"/>
+        <link port="RecordAssembler.value" relation="relation5"/>
+        <link port="StringConst2.output" relation="relation6"/>
     </entity>
-    <entity name="Test_Receiver" class="ptolemy.domains.wireless.kernel.WirelessComposite">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[500.0, 345.0]">
+    <entity name="ActuatorSprinkler" class="ptolemy.domains.wireless.kernel.WirelessComposite">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[360.0, 205.0]">
         </property>
-        <property name="SDF Director" class="ptolemy.domains.sdf.kernel.SDFDirector">
-            <property name="iterations" class="ptolemy.data.expr.Parameter" value="0">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={45, 214, 930, 632}, maximized=false}">
+        </property>
+        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 502]">
+        </property>
+        <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0000000000000002">
+        </property>
+        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{242.73578831658295, 42.5658762562814}">
+        </property>
+        <property name="DE Director" class="ptolemy.domains.de.kernel.DEDirector">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{123.0, -72.46875}">
             </property>
-            <property name="allowDisconnectedGraphs" class="ptolemy.data.expr.Parameter" value="false">
-            </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[65.0, 40.0]">
-            </property>
         </property>
-        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={918, 212, 928, 617}, maximized=false}">
-        </property>
-        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 500]">
-        </property>
-        <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
-        </property>
-        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{347.0, 247.265625}">
-        </property>
-        <port name="inputEnv" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
-            <property name="input"/>
-            <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="SensorChannel">
+        <port name="package_out" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
+            <property name="output"/>
+            <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="C_Int_Data">
             </property>
             <property name="insideChannel" class="ptolemy.data.expr.StringParameter" value="">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[60.0, 200.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[565.0, 100.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_type" class="ptolemy.actor.TypeAttribute" value="{id=string, value=double}">
             </property>
         </port>
+        <port name="package_in_data" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
+            <property name="input"/>
+            <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="C_Int_Data">
+            </property>
+            <property name="insideChannel" class="ptolemy.data.expr.StringParameter" value="">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[-40.0, 75.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_type" class="ptolemy.actor.TypeAttribute" value="{id=string, value=double}">
+            </property>
+        </port>
+        <port name="package_in_activation" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
+            <property name="input"/>
+            <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="C_Controller">
+            </property>
+            <property name="insideChannel" class="ptolemy.data.expr.StringParameter" value="">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[-40.0, 130.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_type" class="ptolemy.actor.TypeAttribute" value="{id=string, value=boolean}">
+            </property>
+        </port>
+        <entity name="RecordAssembler2" class="ptolemy.actor.lib.RecordAssembler">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[458.4375, 80.0]">
+            </property>
+            <port name="id" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="string">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="value" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="double">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+        <entity name="RecordDisassembler" class="ptolemy.actor.lib.RecordDisassembler">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[150.0, 5.0]">
+            </property>
+            <port name="id" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="string">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="value" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="double">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+        <entity name="RecordDisassembler2" class="ptolemy.actor.lib.RecordDisassembler">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[140.0, 170.0]">
+            </property>
+            <port name="id" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="string">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="value" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="boolean">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+        <entity name="StringConst" class="ptolemy.actor.lib.StringConst">
+            <property name="value" class="ptolemy.data.expr.Parameter" value="sprinkler">
+            </property>
+            <doc>Create a constant sequence with a string value.</doc>
+            <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+                <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+                </property>
+                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="80">
+                </property>
+                <property name="displayHeight" class="ptolemy.data.expr.Parameter" value="10">
+                </property>
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[375.0, -30.0]">
+            </property>
+        </entity>
         <entity name="Display" class="ptolemy.actor.lib.gui.Display">
-            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={780, 417, 359, 246}, maximized=false}">
+            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute">
             </property>
-            <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute" value="[343, 186]">
+            <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[220.0, 200.0]">
+            <property name="title" class="ptolemy.data.expr.StringParameter" value="Sprinkler Activation">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[330.0, 200.0]">
             </property>
         </entity>
         <relation name="relation" class="ptolemy.actor.TypedIORelation">
         </relation>
-        <link port="inputEnv" relation="relation"/>
-        <link port="Display.input" relation="relation"/>
+        <relation name="relation2" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation3" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation4" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation5" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation6" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <link port="package_out" relation="relation3"/>
+        <link port="package_in_data" relation="relation"/>
+        <link port="package_in_activation" relation="relation2"/>
+        <link port="RecordAssembler2.output" relation="relation3"/>
+        <link port="RecordAssembler2.id" relation="relation4"/>
+        <link port="RecordAssembler2.value" relation="relation5"/>
+        <link port="RecordDisassembler.input" relation="relation"/>
+        <link port="RecordDisassembler.value" relation="relation5"/>
+        <link port="RecordDisassembler2.input" relation="relation2"/>
+        <link port="RecordDisassembler2.value" relation="relation6"/>
+        <link port="StringConst.output" relation="relation4"/>
+        <link port="Display.input" relation="relation6"/>
     </entity>
     <entity name="DiscreteClock" class="ptolemy.actor.lib.DiscreteClock">
         <doc>Create periodic timed events.</doc>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[55.0, 345.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-140.0, 265.0]">
         </property>
     </entity>
-    <entity name="EnvironmentChannel_Hum" class="ptolemy.domains.wireless.kernel.AtomicWirelessChannel">
-        <property name="name" class="ptolemy.data.expr.NameParameter" value="EnvironmentChannel_Hum">
+    <entity name="C_Ext_Data" class="ptolemy.domains.wireless.kernel.AtomicWirelessChannel">
+        <property name="name" class="ptolemy.data.expr.NameParameter" value="C_Ext_Data">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[205.0, 280.0]">
-        </property>
-    </entity>
-    <entity name="EnvironmentChannel_Temp" class="ptolemy.domains.wireless.kernel.AtomicWirelessChannel">
-        <property name="name" class="ptolemy.data.expr.NameParameter" value="EnvironmentChannel_Temp">
-        </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[205.0, 405.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[55.0, 95.0]">
         </property>
     </entity>
-    <entity name="SensorChannel" class="ptolemy.domains.wireless.kernel.AtomicWirelessChannel">
-        <property name="name" class="ptolemy.data.expr.NameParameter" value="SensorChannel">
+    <entity name="C_Int_Data" class="ptolemy.domains.wireless.kernel.AtomicWirelessChannel">
+        <property name="name" class="ptolemy.data.expr.NameParameter" value="C_Int_Data">
         </property>
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[530.0, 190.0]">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{145.0, 95.0}">
         </property>
     </entity>
-    <entity name="Sensor_Humidity" class="ptolemy.domains.wireless.kernel.WirelessComposite">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[370.0, 310.0]">
+    <entity name="C_Controller" class="ptolemy.domains.wireless.kernel.AtomicWirelessChannel">
+        <property name="name" class="ptolemy.data.expr.NameParameter" value="C_Controller">
         </property>
-        <property name="SDF Director" class="ptolemy.domains.sdf.kernel.SDFDirector">
-            <property name="iterations" class="ptolemy.data.expr.Parameter" value="0">
-            </property>
-            <property name="allowDisconnectedGraphs" class="ptolemy.data.expr.Parameter" value="true">
-            </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[60.0, 40.0]">
-            </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[235.0, 95.0]">
         </property>
-        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={765, 127, 928, 617}, maximized=false}">
+    </entity>
+    <entity name="ActuatorVent" class="ptolemy.domains.wireless.kernel.WirelessComposite">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[362.20265389446934, 327.66669283919515]">
         </property>
-        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 500]">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={294, 217, 930, 632}, maximized=false}">
+        </property>
+        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 502]">
         </property>
         <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
         </property>
-        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{347.0, 247.265625}">
+        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{405.38944723618096, 293.9441739949749}">
         </property>
-        <port name="envIn" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
-            <property name="input"/>
-            <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+        <property name="DE Director" class="ptolemy.domains.de.kernel.DEDirector">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="{187.7788944723619, 158.8883479899498}">
             </property>
-            <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="EnvironmentChannel_Hum">
-            </property>
-            <property name="outsideTransmitProperties" class="ptolemy.data.expr.Parameter">
-            </property>
-            <property name="insideChannel" class="ptolemy.data.expr.StringParameter" value="">
-            </property>
-            <property name="insideTransmitProperties" class="ptolemy.data.expr.Parameter">
-            </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="{20.0, 200.0}">
-            </property>
-        </port>
-        <port name="sensOut" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
+        </property>
+        <port name="package_out" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
             <property name="output"/>
-            <property name="defaultValue" class="ptolemy.data.expr.Parameter">
-            </property>
-            <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="SensorChannel">
-            </property>
-            <property name="outsideTransmitProperties" class="ptolemy.data.expr.Parameter">
+            <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="C_Int_Data">
             </property>
             <property name="insideChannel" class="ptolemy.data.expr.StringParameter" value="">
             </property>
-            <property name="insideTransmitProperties" class="ptolemy.data.expr.Parameter">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[675.0, 265.0]">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="{580.0, 200.0}">
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_type" class="ptolemy.actor.TypeAttribute" value="{id=string, value=double}">
             </property>
         </port>
-        <entity name="AddSubtract" class="ptolemy.actor.lib.AddSubtract">
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[330.0, 200.0]">
+        <port name="package_in_data" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
+            <property name="input"/>
+            <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="C_Int_Data">
             </property>
+            <property name="insideChannel" class="ptolemy.data.expr.StringParameter" value="">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[105.0, 240.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_type" class="ptolemy.actor.TypeAttribute" value="{id=string, value=double}">
+            </property>
+        </port>
+        <port name="package_in_activation" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
+            <property name="input"/>
+            <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="C_Controller">
+            </property>
+            <property name="insideChannel" class="ptolemy.data.expr.StringParameter" value="">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[105.0, 295.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_type" class="ptolemy.actor.TypeAttribute" value="{id=string, value=boolean}">
+            </property>
+        </port>
+        <entity name="RecordAssembler" class="ptolemy.actor.lib.RecordAssembler">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[560.0, 245.0]">
+            </property>
+            <port name="id" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="string">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="value" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="double">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
         </entity>
-        <entity name="Gaussian" class="ptolemy.actor.lib.Gaussian">
-            <doc>Create a sequence of gaussian random variables</doc>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[120.0, 115.0]">
+        <entity name="RecordDisassembler" class="ptolemy.actor.lib.RecordDisassembler">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[285.0, 185.0]">
             </property>
+            <port name="id" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="string">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="value" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="double">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
         </entity>
-        <entity name="Const" class="ptolemy.actor.lib.Const">
-            <property name="value" class="ptolemy.data.expr.Parameter" value="0">
+        <entity name="RecordDisassembler2" class="ptolemy.actor.lib.RecordDisassembler">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[285.0, 335.0]">
             </property>
-            <doc>Create a constant sequence.</doc>
+            <port name="id" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="string">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="value" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="boolean">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+        <entity name="StringConst" class="ptolemy.actor.lib.StringConst">
+            <property name="value" class="ptolemy.data.expr.Parameter" value="vent">
+            </property>
+            <doc>Create a constant sequence with a string value.</doc>
             <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
                 <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
                 </property>
-                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
+                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="80">
+                </property>
+                <property name="displayHeight" class="ptolemy.data.expr.Parameter" value="10">
                 </property>
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[125.0, 295.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[485.0, 160.0]">
+            </property>
+        </entity>
+        <entity name="Display" class="ptolemy.actor.lib.gui.Display">
+            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute">
+            </property>
+            <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute">
+            </property>
+            <property name="title" class="ptolemy.data.expr.StringParameter" value="Vent Activation">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[460.0, 365.0]">
             </property>
         </entity>
         <relation name="relation" class="ptolemy.actor.TypedIORelation">
@@ -265,93 +797,222 @@
         </relation>
         <relation name="relation4" class="ptolemy.actor.TypedIORelation">
         </relation>
-        <link port="envIn" relation="relation"/>
-        <link port="sensOut" relation="relation3"/>
-        <link port="AddSubtract.plus" relation="relation"/>
-        <link port="AddSubtract.plus" relation="relation2"/>
-        <link port="AddSubtract.plus" relation="relation4"/>
-        <link port="AddSubtract.output" relation="relation3"/>
-        <link port="Gaussian.output" relation="relation2"/>
-        <link port="Const.output" relation="relation4"/>
+        <relation name="relation5" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation6" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <link port="package_out" relation="relation3"/>
+        <link port="package_in_data" relation="relation"/>
+        <link port="package_in_activation" relation="relation2"/>
+        <link port="RecordAssembler.output" relation="relation3"/>
+        <link port="RecordAssembler.id" relation="relation4"/>
+        <link port="RecordAssembler.value" relation="relation5"/>
+        <link port="RecordDisassembler.input" relation="relation"/>
+        <link port="RecordDisassembler.value" relation="relation5"/>
+        <link port="RecordDisassembler2.input" relation="relation2"/>
+        <link port="RecordDisassembler2.value" relation="relation6"/>
+        <link port="StringConst.output" relation="relation4"/>
+        <link port="Display.input" relation="relation6"/>
     </entity>
-    <entity name="Sensor_Temperature" class="ptolemy.domains.wireless.kernel.WirelessComposite">
-        <property name="_location" class="ptolemy.kernel.util.Location" value="[375.0, 425.0]">
+    <entity name="SensorTemperature" class="ptolemy.domains.wireless.kernel.WirelessComposite">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[140.0, 330.0]">
         </property>
-        <property name="SDF Director" class="ptolemy.domains.sdf.kernel.SDFDirector">
-            <property name="iterations" class="ptolemy.data.expr.Parameter" value="0">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={36, 255, 930, 632}, maximized=false}">
+        </property>
+        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 502]">
+        </property>
+        <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0000000000000036">
+        </property>
+        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{335.03768844221105, 410.1469849246232}">
+        </property>
+        <property name="DE Director" class="ptolemy.domains.de.kernel.DEDirector">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[50.0, 295.0]">
             </property>
-            <property name="allowDisconnectedGraphs" class="ptolemy.data.expr.Parameter" value="true">
-            </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[60.0, 40.0]">
-            </property>
         </property>
-        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={765, 127, 928, 617}, maximized=false}">
-        </property>
-        <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[700, 500]">
-        </property>
-        <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
-        </property>
-        <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{347.0, 247.265625}">
-        </property>
-        <port name="envIn" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
+        <port name="ext_package_in" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
             <property name="input"/>
-            <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="EnvironmentChannel_Temp">
+            <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="C_Ext_Data">
             </property>
             <property name="insideChannel" class="ptolemy.data.expr.StringParameter" value="">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="{20.0, 200.0}">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[40.0, 355.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_type" class="ptolemy.actor.TypeAttribute" value="{humid=double, temp=double}">
             </property>
         </port>
-        <port name="sensOut" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
+        <port name="package_out" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
             <property name="output"/>
-            <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="SensorChannel">
+            <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="C_Int_Data">
             </property>
             <property name="insideChannel" class="ptolemy.data.expr.StringParameter" value="">
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="{580.0, 200.0}">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[650.0, 345.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_type" class="ptolemy.actor.TypeAttribute" value="{id=string, value=double}">
+            </property>
+        </port>
+        <port name="int_package_in" class="ptolemy.domains.wireless.kernel.WirelessIOPort">
+            <property name="input"/>
+            <property name="outsideChannel" class="ptolemy.data.expr.StringParameter" value="C_Int_Data">
+            </property>
+            <property name="insideChannel" class="ptolemy.data.expr.StringParameter" value="">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[40.0, 485.0]">
+            </property>
+            <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+            </property>
+            <property name="_type" class="ptolemy.actor.TypeAttribute" value="{id=string, value=double}">
             </property>
         </port>
         <entity name="AddSubtract" class="ptolemy.actor.lib.AddSubtract">
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[330.0, 200.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[400.0, 355.0]">
             </property>
         </entity>
         <entity name="Gaussian" class="ptolemy.actor.lib.Gaussian">
             <doc>Create a sequence of gaussian random variables</doc>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[120.0, 115.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[180.0, 250.0]">
             </property>
         </entity>
-        <entity name="Const" class="ptolemy.actor.lib.Const">
-            <property name="value" class="ptolemy.data.expr.Parameter" value="0">
+        <entity name="StringConst" class="ptolemy.actor.lib.StringConst">
+            <property name="value" class="ptolemy.data.expr.Parameter" value="TemperatureSensor">
             </property>
-            <doc>Create a constant sequence.</doc>
+            <doc>Create a constant sequence with a string value.</doc>
             <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
                 <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
                 </property>
-                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="60">
+                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="80">
+                </property>
+                <property name="displayHeight" class="ptolemy.data.expr.Parameter" value="10">
                 </property>
             </property>
-            <property name="_location" class="ptolemy.kernel.util.Location" value="[125.0, 295.0]">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[420.0, 295.0]">
             </property>
         </entity>
+        <entity name="RecordAssembler" class="ptolemy.actor.lib.RecordAssembler">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[533.6658782958984, 324.9978485107422]">
+            </property>
+            <port name="id" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="string">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="value" class="ptolemy.actor.TypedIOPort">
+                <property name="input"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="double">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+        <entity name="Display" class="ptolemy.actor.lib.gui.Display">
+            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={777, 410, 365, 259}, maximized=false}">
+            </property>
+            <property name="_paneSize" class="ptolemy.actor.gui.SizeAttribute" value="[347, 186]">
+            </property>
+            <property name="title" class="ptolemy.data.expr.StringParameter" value="Temperature loop">
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[425.0, 475.0]">
+            </property>
+        </entity>
+        <entity name="RecordDisassembler2" class="ptolemy.actor.lib.RecordDisassembler">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[235.0, 465.0]">
+            </property>
+            <port name="id" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="string">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="value" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="double">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+        <entity name="RecordDisassembler" class="ptolemy.actor.lib.RecordDisassembler">
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[170.32839584350586, 335.03392028808594]">
+            </property>
+            <port name="humid" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="double">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+            <port name="temp" class="ptolemy.actor.TypedIOPort">
+                <property name="output"/>
+                <property name="_type" class="ptolemy.actor.TypeAttribute" value="double">
+                </property>
+                <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+            </port>
+        </entity>
+        <entity name="InternalHumidity" class="ptolemy.domains.sdf.lib.SampleDelay">
+            <property name="initialOutputs" class="ptolemy.data.expr.Parameter" value="{{id = &quot;init&quot;, value = 14.0}}">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="20">
+            </property>
+            <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
+                <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="initialOutputs">
+                </property>
+                <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+                </property>
+            </property>
+            <property name="_location" class="ptolemy.kernel.util.Location" value="[140.0, 485.0]">
+            </property>
+        </entity>
+        <relation name="relation3" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation5" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation6" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation7" class="ptolemy.actor.TypedIORelation">
+        </relation>
         <relation name="relation" class="ptolemy.actor.TypedIORelation">
         </relation>
         <relation name="relation2" class="ptolemy.actor.TypedIORelation">
         </relation>
-        <relation name="relation3" class="ptolemy.actor.TypedIORelation">
+        <relation name="relation9" class="ptolemy.actor.TypedIORelation">
         </relation>
         <relation name="relation4" class="ptolemy.actor.TypedIORelation">
         </relation>
-        <link port="envIn" relation="relation"/>
-        <link port="sensOut" relation="relation3"/>
-        <link port="AddSubtract.plus" relation="relation"/>
+        <relation name="relation8" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <relation name="relation10" class="ptolemy.actor.TypedIORelation">
+        </relation>
+        <link port="ext_package_in" relation="relation"/>
+        <link port="package_out" relation="relation5"/>
+        <link port="int_package_in" relation="relation8"/>
+        <link port="AddSubtract.plus" relation="relation3"/>
         <link port="AddSubtract.plus" relation="relation2"/>
         <link port="AddSubtract.plus" relation="relation4"/>
-        <link port="AddSubtract.output" relation="relation3"/>
-        <link port="Gaussian.output" relation="relation2"/>
-        <link port="Const.output" relation="relation4"/>
+        <link port="AddSubtract.output" relation="relation6"/>
+        <link port="Gaussian.output" relation="relation3"/>
+        <link port="StringConst.output" relation="relation7"/>
+        <link port="RecordAssembler.output" relation="relation5"/>
+        <link port="RecordAssembler.id" relation="relation7"/>
+        <link port="RecordAssembler.value" relation="relation6"/>
+        <link port="Display.input" relation="relation9"/>
+        <link port="RecordDisassembler2.input" relation="relation10"/>
+        <link port="RecordDisassembler2.id" relation="relation9"/>
+        <link port="RecordDisassembler2.value" relation="relation4"/>
+        <link port="RecordDisassembler.input" relation="relation"/>
+        <link port="RecordDisassembler.temp" relation="relation2"/>
+        <link port="InternalHumidity.input" relation="relation8"/>
+        <link port="InternalHumidity.output" relation="relation10"/>
     </entity>
-    <relation name="relation2" class="ptolemy.actor.TypedIORelation">
+    <relation name="relation" class="ptolemy.actor.TypedIORelation">
     </relation>
-    <link port="GlobalEnvironment.trigger" relation="relation2"/>
-    <link port="DiscreteClock.output" relation="relation2"/>
+    <link port="GlobalEnvironment.trigger" relation="relation"/>
+    <link port="DiscreteClock.output" relation="relation"/>
 </entity>
