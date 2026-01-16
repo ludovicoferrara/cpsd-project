@@ -1,12 +1,10 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
     "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
-<entity name="projectmodel - Copia" class="ptolemy.actor.TypedCompositeActor">
+<entity name="projectmodel" class="ptolemy.actor.TypedCompositeActor">
     <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="11.0.1">
     </property>
     <property name="WirelessDirector" class="ptolemy.domains.wireless.kernel.WirelessDirector">
-        <property name="localClock" class="ptolemy.actor.LocalClock">
-        </property>
         <property name="stopTime" class="ptolemy.data.expr.Parameter" value="25000.0">
         </property>
         <property name="synchronizeToRealTime" class="ptolemy.data.expr.Parameter" value="false">
@@ -14,13 +12,13 @@
         <property name="_location" class="ptolemy.kernel.util.Location" value="[-5.0, 145.0]">
         </property>
     </property>
-    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={1, 1, 1938, 1061}, maximized=false}">
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 1, 1938, 1061}, maximized=false}">
     </property>
     <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1708, 931]">
     </property>
-    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="2.782477341389728">
+    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="2.2259818731117824">
     </property>
-    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{167.12377850162875, 189.50000000000003}">
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{167.12377850162875, 189.5}">
     </property>
     <property name="Annotation" class="ptolemy.vergil.kernel.attributes.TextAttribute">
         <property name="textColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 0.0, 1.0}">
@@ -133,7 +131,7 @@
             </port>
         </entity>
         <entity name="Expression2" class="ptolemy.actor.lib.Expression">
-            <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="60 + 15 * cos(trigger * PI / 5500)">
+            <property name="expression" class="ptolemy.kernel.util.StringAttribute" value="60 + 15 * sin(trigger * PI / 5500)">
             </property>
             <property name="_icon" class="ptolemy.vergil.icon.BoxedValueIcon">
                 <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="expression">
@@ -839,8 +837,6 @@
             </property>
             <port name="value" class="ptolemy.actor.TypedIOPort">
                 <property name="input"/>
-                <property name="defaultValue" class="ptolemy.data.expr.Parameter">
-                </property>
                 <property name="_type" class="ptolemy.actor.TypeAttribute" value="double">
                 </property>
                 <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
@@ -848,8 +844,6 @@
             </port>
             <port name="prev" class="ptolemy.actor.TypedIOPort">
                 <property name="input"/>
-                <property name="defaultValue" class="ptolemy.data.expr.Parameter">
-                </property>
                 <property name="_type" class="ptolemy.actor.TypeAttribute" value="boolean">
                 </property>
                 <property name="_showName" class="ptolemy.data.expr.SingletonParameter" value="true">
